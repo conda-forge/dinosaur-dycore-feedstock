@@ -1,13 +1,14 @@
+{% set python_min = "3.10" %}
 {% set name = "dinosaur-dycore" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dinosaur_dycore-{{ version }}.tar.gz
-  sha256: 3505d59eb9d90ad58572f93fa87db5536b9df0663f95701d50c8ccb027e767e1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dinosaur_dycore-{{ version }}.tar.gz
+  sha256: bd73146cd4994f955b6c76e27a82a287b6ee3d52db339734fee94bdfa7ba2d28
 
 build:
   noarch: python
@@ -16,20 +17,21 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.10
-    - fsspec
+    - python >={{ python_min }}
     - jax
     - jaxlib
     - numpy
-    - pandas
     - pint
     - scipy
     - scikit-learn
     - tree-math
+    - dask-core
+    - fsspec
+    - pandas
     - xarray
     - xarray-tensorstore
 
@@ -39,6 +41,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:

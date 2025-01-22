@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "dinosaur-dycore" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dinosaur_dycore-{{ version }}.tar.gz
-  sha256: cecb5783678140ff58e968310d084e59ca74babe4cf5595efa3809279f00cb71
+  sha256: 4265c58ba3602c374380376a029bf3582e3191f40426dca90082870539b4ce86
 
 build:
   noarch: python

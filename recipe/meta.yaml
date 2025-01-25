@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dinosaur/dinosaur-{{ version }}.tar.gz
-  sha256: dd25c885829e4dc94120129a316be283851f463d76e611b07bc5a9e3d803d2ca
+  sha256: bd63a541a4f3f379e98f4661645f6bfdaf47c9923c420a1e6ca0367cf251b743
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:

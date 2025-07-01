@@ -1,4 +1,4 @@
-{% set version = "1.3.3" %}
+{% set version = "1.3.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dinosaur/dinosaur-{{ version }}.tar.gz
-  sha256: b6852ea3fce78b5de20011c029669c2784e7e1f9638078d0a18b5a39f7cc3de5
+  sha256: 93b28ae70a96fcd67bf2b886c38c1e14c701b31ef50d17ee21d163682933b64d
 
 build:
   noarch: python

@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/d/dinosaur/dinosaur-{{ version }}.tar.gz
-  sha256: 8dcb4b2f14c4434caf73a5f5f0c99ff302232357ca2edd368768ea585b1f0935
+  sha256: 6115f6512685e60860996ab4db1c94c3f67128d931ec8b0cdf3ab19dca5d23ad
 
 build:
   noarch: python

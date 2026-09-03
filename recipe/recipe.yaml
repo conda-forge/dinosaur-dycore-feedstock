@@ -46,6 +46,7 @@ tests:
         - "*"
 
 about:
+  summary: differentiable dynamics for global atmospheric modeling
   license: Apache-2.0
   license_file: LICENSE
   homepage: https://pypi.org/project/dinosaur-dycore/

@@ -3,11 +3,9 @@ About dinosaur-dycore-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dinosaur-dycore-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/google-research/dinosaur
+Home: https://pypi.org/project/dinosaur-dycore/
 
 Package license: Apache-2.0
-
-Summary: differentiable dynamics for global atmospheric modeling
 
 Current build status
 ====================

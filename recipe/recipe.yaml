@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: "1.2.1"
+
+package:
+  name: dinosaur-dycore
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/d/dinosaur-dycore/dinosaur_dycore-${{ version }}.tar.gz
+  sha256: 4265c58ba3602c374380376a029bf3582e3191f40426dca90082870539b4ce86
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - jax
+    - jaxlib
+    - numpy
+    - pint
+    - scipy
+    - scikit-learn
+    - tree-math
+    - dask-core
+    - fsspec
+    - pandas
+    - xarray
+    - xarray-tensorstore
+
+tests:
+  - python:
+      imports:
+        - dinosaur
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://pypi.org/project/dinosaur-dycore/
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
